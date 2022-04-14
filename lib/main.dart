@@ -40,23 +40,17 @@ class formSectionState extends State<formSection> {
     }
   }
 
-  showAlertDialog(context) {
-    AlertDialog dialog = AlertDialog(
-      title: Text('Welcome, ${usernameController.text}'),
-      actions: [
-        ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text('OK')),
-      ],
-    );
-
+  void showAlertDialog(context) {
     showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return dialog;
-        });
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Text('Welcome, ${usernameController.text}'),
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(12.0))),
+        );
+      },
+    );
   }
 
   @override
