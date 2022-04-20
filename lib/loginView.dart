@@ -73,19 +73,11 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Login')),
       body: Container(
-        padding: const EdgeInsets.all(50),
+        padding: const EdgeInsets.all(30),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              'Sign In',
-              style: TextStyle(fontSize: 30),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
             Form(
               key: _formKey,
               child: Column(
